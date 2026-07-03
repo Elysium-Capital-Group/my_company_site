@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elysium Capital Group Sdn Bhd | Professional Financing Consultancy</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #061426;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: #03101f;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c9a24d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    width: 220px;
+    max-height: 95px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(255,215,0,0.25));
+}
+
+nav a {
+    margin-left: 28px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    min-height: 88vh;
+    background:
+        linear-gradient(rgba(3,16,31,0.85), rgba(3,16,31,0.92)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 8% 60px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.hero small {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e6e6e6;
+    max-width: 680px;
+}
+
+.btn-group {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #d4af37, #f0c866);
+    color: #061426;
+}
+
+.btn-outline {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title small {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+.about {
+    background: #081b32;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #d7d7d7;
+    margin-bottom: 18px;
+}
+
+.about-logo {
+    text-align: center;
+}
+
+.about-logo img {
+    max-width: 500px;
+    width: 100%;
+    filter: drop-shadow(0 18px 35px rgba(0,0,0,0.45));
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #0b203a;
+    border: 1px solid rgba(212,175,55,0.35);
+    padding: 32px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #d9d9d9;
+}
+
+.why {
+    background: #081b32;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.why-box {
+    text-align: center;
+    background: #0b203a;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(212,175,55,0.3);
+}
+
+.why-box h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.contact {
+    background: #03101f;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.contact-info {
+    background: #0b203a;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid rgba(212,175,55,0.35);
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #e5e5e5;
+}
+
+.contact-info strong {
+    color: #d4af37;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    border: 0;
+    border-radius: 10px;
+}
+
+footer {
+    background: #020a13;
+    text-align: center;
+    padding: 30px 8%;
+    color: #cccccc;
+    font-size: 14px;
+    border-top: 1px solid rgba(212,175,55,0.3);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #25D366;
+    color: white;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 6%;
+    }
+
+    .logo-area img {
+        width: 180px;
+        max-height: 80px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .about,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-area">
+        <img src="logo.png" alt="Elysium Capital Group Logo">
+    </div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#services">SERVICES</a>
+        <a href="#why">WHY CHOOSE US</a>
+        <a href="#contact">CONTACT US</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <small>PROFESSIONAL FINANCING CONSULTANCY</small>
+
+        <h1>Your Trusted Partner in <span>Financing Solutions</span></h1>
+
+        <p>
+            Elysium Capital Group Sdn Bhd provides professional banking and financing consultancy
+            services for individuals and businesses, helping clients explore suitable financial
+            solutions with proper guidance and support.
+        </p>
+
+        <div class="btn-group">
+            <a class="btn btn-gold" href="https://wa.me/60162828268" target="_blank">WhatsApp Us</a>
+            <a class="btn btn-outline" href="#services">Our Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <div>
+        <small style="color:#d4af37;font-weight:bold;">ABOUT US</small>
+        <h2>Professional Guidance for Your Financing Needs</h2>
+
+        <p>
+            Elysium Capital Group Sdn Bhd is a professional financing consultancy company
+            dedicated to assisting individuals and businesses in understanding and preparing
+            their financing applications.
+        </p>
+
+        <p>
+            We focus on proper documentation, clear communication, responsible consultation,
+            and practical financial guidance to help our clients make informed decisions.
+        </p>
+
+        <p>
+            Registration No: <strong>202501050344 (1651752-P)</strong>
+        </p>
+    </div>
+
+    <div class="about-logo">
+        <img src="logo.png" alt="Elysium Capital Group Logo">
+    </div>
+</section>
+
+<section class="section" id="services">
+    <div class="section-title">
+        <small>OUR SERVICES</small>
+        <h2>Comprehensive Financing Consultancy</h2>
+    </div>
+
+    <div class="services-grid">
+        <div class="card">
+            <h3>Personal Financing</h3>
+            <p>Consultation and application guidance for personal loan and unsecured financing needs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Home Loan & Mortgage</h3>
+            <p>Assistance for home purchase, housing loan, mortgage refinancing, and equity withdrawal.</p>
+        </div>
+
+        <div class="card">
+            <h3>Business Financing</h3>
+            <p>Financing consultation for SMEs, working capital, business expansion, and corporate funding needs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Debt Consolidation</h3>
+            <p>Explore suitable restructuring options to consolidate repayments and improve monthly cash flow.</p>
+        </div>
+
+        <div class="card">
+            <h3>Credit Card Application</h3>
+            <p>Guidance on suitable credit card applications based on customer profile and eligibility.</p>
+        </div>
+
+        <div class="card">
+            <h3>Refinance / Cash Out</h3>
+            <p>Consultation for refinancing, cash out, and property-backed financing arrangements.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section why" id="why">
+    <div class="section-title">
+        <small>WHY CHOOSE US</small>
+        <h2>Why Clients Trust Elysium Capital Group</h2>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-box">
+            <h3>Professional</h3>
+            <p>Structured consultation and proper application guidance.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>Reliable</h3>
+            <p>Practical support throughout the financing process.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>Transparent</h3>
+            <p>Clear explanation and responsible financial guidance.</p>
+        </div>
+
+        <div class="why-box">
+            <h3>Confidential</h3>
+            <p>Your personal and financial information is handled carefully.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="section-title">
+        <small>CONTACT US</small>
+        <h2>Speak With Our Consultant</h2>
+    </div>
+
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <p><strong>Company:</strong><br>ELYSIUM CAPITAL GROUP SDN BHD</p>
+            <p><strong>Registration No:</strong><br>202501050344 (1651752-P)</p>
+            <p><strong>Address:</strong><br>No. 6-1, Persiaran Puteri 1, Bandar Puteri Puchong, 47100 Puchong, Selangor</p>
+            <p><strong>Office:</strong><br>+603-8060 5768</p>
+            <p><strong>WhatsApp:</strong><br>+6016-2828268</p>
+            <p><strong>Email:</strong><br>info@infoelysiumcapitalgroup.com</p>
+            <p><strong>Website:</strong><br>https://infoelysiumcapitalgroup.com/</p>
+
+            <br>
+            <a class="btn btn-gold" href="https://wa.me/60162828268" target="_blank">Contact via WhatsApp</a>
+        </div>
+
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps?q=No.%206-1%2C%20Persiaran%20Puteri%201%2C%20Bandar%20Puteri%20Puchong%2047100%20Puchong%20Selangor&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ELYSIUM CAPITAL GROUP SDN BHD. All Rights Reserved.</p>
+    <p>Registration No: 202501050344 (1651752-P)</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/60162828268" target="_blank">☏</a>
+
+</body>
+</html>
